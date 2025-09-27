@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
             </div>
             <div class="date">
                 <p>आज की तारीख</p>
-                <p>9/9/2025</p>
+                <p id="today-date"></p>
             </div>
         </header>
 
@@ -25,7 +25,7 @@
             <div class="status-card system-status">
                 <p class="label">सिस्टम स्थिति</p>
                 <div class="value-container">
-                    <span class="value active">चालू</span>
+                    <span class="value active" id="status">बंद</span>
                     <span class="indicator check">✅</span>
                 </div>
             </div>
@@ -33,9 +33,9 @@
             <div class="status-card tank-level">
                 <p class="label">टैंक का स्तर</p>
                 <div class="progress-bar-container">
-                    <p class="percentage">75%</p>
+                    <p class="percentage" id="tank-text">0%</p>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 75%;"></div>
+                        <div class="progress" id="tank-level" style="width: 0%;"></div>
                     </div>
                 </div>
             </div>
@@ -52,7 +52,7 @@
             <div class="status-card area-covered">
                 <p class="label">आज का क्षेत्र</p>
                 <div class="value-container">
-                    <span class="value">2.5 एकड़</span>
+                    <span class="value" id="summary-area">0 एकड़</span>
                     <span class="indicator ruler">📏</span>
                 </div>
             </div>
@@ -63,17 +63,17 @@
                 <h2>💧 छिड़काव नियंत्रण</h2>
                 <div class="sprayer-image-container">
                     <span class="sprayer-image">🚿</span>
-                    <p>छिड़काव बंद</p>
+                    <p id="spray-status-text">छिड़काव बंद</p>
                 </div>
                 <div class="control-buttons">
-                    <button class="start-btn">▶ शुरू करें</button>
-                    <button class="stop-btn">◼ बंद करें</button>
+                    <button id="start-btn" class="start-btn">▶ शुरू करें</button>
+                    <button id="stop-btn" class="stop-btn">◼ बंद करें</button>
                 </div>
                 <div class="intensity-control">
                     <p>छिड़काव की तीव्रता</p>
                     <div class="slider-container">
                         <span class="min-label">कम</span>
-                        <input type="range" min="0" max="100" value="50" class="slider">
+                        <input type="range" id="intensity-slider" min="0" max="100" value="50" class="slider">
                         <span class="max-label">अधिक</span>
                     </div>
                 </div>
@@ -83,18 +83,15 @@
                 <h2>📈 आज का सारांश</h2>
                 <div class="summary-data">
                     <p>कुल समय:</p>
-                    <span class="data-value">2 घंटे 30 मिनट</span>
+                    <span class="data-value" id="summary-time">0 घंटे</span>
 
                     <p>खपत औषधि:</p>
-                    <span class="data-value">15 लीटर</span>
-
-                    <p>क्षेत्र कवरेज:</p>
-                    <span class="data-value">2.5 एकड़</span>
+                    <span class="data-value" id="summary-medicine">0 लीटर</span>
 
                     <p>बैटरी:</p>
                     <div class="battery-data">
-                        <span class="data-value">85%</span>
-                        <div class="battery-bar" style="width: 85%;"></div>
+                        <span class="data-value" id="battery-text">0%</span>
+                        <div class="battery-bar" id="battery-level" style="width: 0%;"></div>
                         <span class="battery-icon">🔋</span>
                     </div>
                 </div>
@@ -102,8 +99,15 @@
         </div>
 
         <div class="emergency-container">
-            <button class="emergency-btn">🔴 आपातकालीन रोकें</button>
+            <button id="emergency-stop" class="emergency-btn">🔴 आपातकालीन रोकें</button>
         </div>
     </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Show today's date
+        document.getElementById("today-date").textContent =
+            new Date().toLocaleDateString("hi-IN");
+    </script>
 </body>
 </html>
