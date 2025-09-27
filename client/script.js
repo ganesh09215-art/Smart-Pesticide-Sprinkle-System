@@ -36,7 +36,8 @@ async function fetchStatus() {
 
 async function sendCommand(action, value) {
   try {
-    await fetch("http://localhost:5000/api/command", {
+    await fetch("https://spssserver.vercel.app/api/command", {
+      
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ action, value }),
