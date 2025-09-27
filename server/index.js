@@ -1,4 +1,3 @@
-// server.js
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
@@ -25,6 +24,10 @@ let sprayerStatus = "बंद";
 let currentIntensity = 50;
 let batteryLevel = 85;
 let tankLevel = 75;
+
+app.get("/", (req, res) => {
+  res.send("✅ Server is running");
+});
 
 // Status API
 app.get("/api/status", (req, res) => {
