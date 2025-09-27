@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>कीटनाशक छिड़काव प्रणाली</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <div class="logo">
+                <span class="icon">🌱</span>
+                <h1>कीटनाशक छिड़काव प्रणाली</h1>
+                <p>स्मार्ट फार्मिंग डैशबोर्ड</p>
+            </div>
+            <div class="date">
+                <p>आज की तारीख</p>
+                <p>9/9/2025</p>
+            </div>
+        </header>
+
+        <div class="top-status-bar">
+            <div class="status-card system-status">
+                <p class="label">सिस्टम स्थिति</p>
+                <div class="value-container">
+                    <span class="value active">चालू</span>
+                    <span class="indicator check">✅</span>
+                </div>
+            </div>
+
+            <div class="status-card tank-level">
+                <p class="label">टैंक का स्तर</p>
+                <div class="progress-bar-container">
+                    <p class="percentage">75%</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-card weather">
+                <p class="label">मौसम</p>
+                <div class="value-container">
+                    <span class="value">धूप</span>
+                    <span class="indicator sun">☀</span>
+                </div>
+                <p class="sub-text">छिड़काव के लिए उपयुक्त</p>
+            </div>
+
+            <div class="status-card area-covered">
+                <p class="label">आज का क्षेत्र</p>
+                <div class="value-container">
+                    <span class="value">2.5 एकड़</span>
+                    <span class="indicator ruler">📏</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="control-panel">
+                <h2>💧 छिड़काव नियंत्रण</h2>
+                <div class="sprayer-image-container">
+                    <span class="sprayer-image">🚿</span>
+                    <p>छिड़काव बंद</p>
+                </div>
+                <div class="control-buttons">
+                    <button class="start-btn">▶ शुरू करें</button>
+                    <button class="stop-btn">◼ बंद करें</button>
+                </div>
+                <div class="intensity-control">
+                    <p>छिड़काव की तीव्रता</p>
+                    <div class="slider-container">
+                        <span class="min-label">कम</span>
+                        <input type="range" min="0" max="100" value="50" class="slider">
+                        <span class="max-label">अधिक</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-panel">
+                <h2>📈 आज का सारांश</h2>
+                <div class="summary-data">
+                    <p>कुल समय:</p>
+                    <span class="data-value">2 घंटे 30 मिनट</span>
+
+                    <p>खपत औषधि:</p>
+                    <span class="data-value">15 लीटर</span>
+
+                    <p>क्षेत्र कवरेज:</p>
+                    <span class="data-value">2.5 एकड़</span>
+
+                    <p>बैटरी:</p>
+                    <div class="battery-data">
+                        <span class="data-value">85%</span>
+                        <div class="battery-bar" style="width: 85%;"></div>
+                        <span class="battery-icon">🔋</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="emergency-container">
+            <button class="emergency-btn">🔴 आपातकालीन रोकें</button>
+        </div>
+    </div>
+</body>
+</html>
